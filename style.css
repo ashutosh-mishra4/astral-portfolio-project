@@ -3,7 +3,47 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     background-image: url('assets/images/bg.jpg');
+    font-family: "Source Sans Pro", sans-serif;
+}
+.menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.home-menu,.work-menu,.contact-menu,.social-menu{
+    padding-left: 2em;   
+    transform: scale(1.5);
+    margin: 10% 0 2%;
+}
+.main-section{
+    height: 61.2vh;
+    width: 60%;
+    background-color: white;
+    margin: auto;
+}
+.main-section img{
+    float: right;
+}
+.name{
+    font-size: 3em;
+    padding: 18% 0 2% 5%;
+}
+.occupation{
+    font-size: 1.2em;
+    padding-left: 5%;
+    color: #aaaaaa;
+}
+.work-screen{
+    width: 70%;
+}
+.work-text{
+    padding-left: 8%;
+}
+.work-images img{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
