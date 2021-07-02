@@ -47,3 +47,30 @@ body{
     align-items: center;
     justify-content: center;
 }
+.contact-screen{
+    
+}
+input,#message{
+    margin: 2% 0 0 5%;
+    padding: 2%;
+    width: 43%;
+    background-color: #f4f4f4;
+    border: none;
+    outline: none;
+}
+#email{
+    margin-left: 3%;
+}
+#subject, #message{
+    display: block;
+    width: 89.5%;
+}
+#message{
+    height: 15em;
+    
+}
+#button{
+    background-color: #222222;
+    color: #ffffff;
+    width: 17%;
+}
