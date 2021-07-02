@@ -4,51 +4,84 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url('assets/images/bg.jpg');
+    background-image: url('assets/images/bg.jpg') ;
     font-family: "Source Sans Pro", sans-serif;
+    background-size: cover;
+}
+.fa-home,.fa-folder,.fa-envelope,.fa-twitter{
+    color: white;
 }
 .menu{
     display: flex;
     list-style-type: none;
     justify-content: center;
 }
-.home-menu,.work-menu,.contact-menu,.social-menu{
-    padding-left: 2em;   
-    transform: scale(1.5);
-    margin: 10% 0 2%;
+.home,.work,.contact,.twitter{
+    padding-left: 3em;   
+    transform: scale(2);
+    position: relative;
+    right: 1em;
+}
+.home-menu,.work-menu,.contact-menu,.twitter-menu{
+    margin: 12% 0 3% 0;
 }
 .main-section{
-    height: 61.2vh;
-    width: 60%;
     background-color: white;
+    width: 50%;
+    height: 24.5em;
     margin: auto;
 }
 .main-section img{
     float: right;
 }
+.home-screen-profile{
+    display: none;
+}
 .name{
-    font-size: 3em;
+    font-size: 3vw;
     padding: 18% 0 2% 5%;
 }
 .occupation{
-    font-size: 1.2em;
+    font-size: 1.5vw;
     padding-left: 5%;
     color: #aaaaaa;
 }
 .work-screen{
-    width: 70%;
+    width: 67%;
+    height: 43em;
 }
 .work-text{
-    padding-left: 8%;
+    padding-left: 5%;
 }
-.work-images img{
-    padding: 2%;
+.work-text h1{
+    padding-top: 2em;
+    margin-bottom: 2.5%;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.work-text p{
+    line-height: 1.7em;
+    padding-bottom: 1em;
+}
+.work-images{
+    
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
+.work-images img{
+    padding: 1%;
+}
 .contact-screen{
-    
+    padding: 4% 2%;
+    height: auto;
+    margin-bottom: 10%;
+}
+.contact-screen h1{
+    margin-left: 5%;
+    font-size: 2em;
+    font-weight: lighter;
 }
 input,#message{
     margin: 2% 0 0 5%;
@@ -67,10 +100,87 @@ input,#message{
 }
 #message{
     height: 15em;
-    
+    resize: none;
 }
 #button{
     background-color: #222222;
     color: #ffffff;
-    width: 17%;
+    padding: 1.5em;
+    width: unset;
+}
+
+/* For Small Laptops */
+@media screen and (max-width: 1024px) {
+    .home-screen{
+        width: 80%;
+        height: 20em;
+    }
+    .home-screen img{
+        height: 20em;
+        width: 15em;
+    }    
+    .home-screen-profile{
+        
+        text-align: center;
+    }
+}
+
+/* For Tablet screens */
+@media screen and (max-width: 768px){
+    .home-screen{
+        width: 60%;
+        height: 12em;
+    }
+    .home-screen img{
+        height: 12em;
+        width: 10em;
+    }    
+    .contact-screen{
+        width: 80%;
+    }    
+    .contact-screen h1{
+        font-size: 1.5em;
+    }
+    input,#message{
+        margin-top: 3%;
+    }
+    #button{
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .home,.work,.contact,.twitter{
+        transform: scale(1);
+        padding-left: 1em;
+    }
+    .home-screen{
+        display: none;
+    }
+    .home-screen-profile{
+        display: block;
+        height: 14.5em;
+        width: 17em;
+        object-fit: cover;
+        margin: auto;
+    }
+    .contact-screen{
+        width: 95%;
+    }
+    .contact-screen h1{
+        display: none;
+    }
+    #name,#email{
+        display: block;
+        margin: 3% 2%;
+    }    
+    input,#subject,#message{
+        margin-left: 2%;
+        width: 95%;
+        padding: 4%;
+    }
+    #button{
+        width: 95%;
+        margin-top: 5%;
+    }
 }
