@@ -6,7 +6,7 @@
 body{
     background-image: url('assets/images/bg.jpg') ;
     font-family: "Source Sans Pro", sans-serif;
-    background-size: cover;
+    background-size: 100vw auto;    
 }
 .fa-home,.fa-folder,.fa-envelope,.fa-twitter{
     color: white;
@@ -14,28 +14,30 @@ body{
 .menu{
     display: flex;
     list-style-type: none;
+    margin: 25vh 0 0 0;
     justify-content: center;
+    gap: 3%;
 }
 .home,.work,.contact,.twitter{
-    padding-left: 3em;   
     transform: scale(2);
-    position: relative;
-    right: 1em;
+
 }
-.home-menu,.work-menu,.contact-menu,.twitter-menu{
-    margin: 12% 0 3% 0;
+.home-menu:hover,.work-menu:hover,.contact-menu:hover,.twitter-menu:hover{
+    cursor: pointer;
 }
 .main-section{
     background-color: white;
     width: 50%;
     height: 24.5em;
     margin: auto;
+    margin-top: 3vh;
 }
 .main-section img{
     float: right;
 }
 .home-screen-profile{
     display: none;
+    margin-top: 3vh;
 }
 .name{
     font-size: 3vw;
@@ -49,9 +51,11 @@ body{
 .work-screen{
     width: 67%;
     height: 43em;
+    display: none;
 }
 .work-text{
     padding-left: 5%;
+    padding-right: 5%;
 }
 .work-text h1{
     padding-top: 2em;
@@ -64,7 +68,6 @@ body{
     padding-bottom: 1em;
 }
 .work-images{
-    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -77,6 +80,7 @@ body{
     padding: 4% 2%;
     height: auto;
     margin-bottom: 10%;
+    display: none;
 }
 .contact-screen h1{
     margin-left: 5%;
@@ -108,9 +112,29 @@ input,#message{
     padding: 1.5em;
     width: unset;
 }
+footer{
+    background-color: white;
+    height: 75vh;
+    width: 98.75vw;
+    display: none;
+}
+hr{
+    margin-top: 5%;
+    width: 90%;
+}
 
 /* For Small Laptops */
 @media screen and (max-width: 1024px) {
+    body{
+        background-size: 100vw 100vh;
+    }
+    .menu{
+        gap: 5%;
+    }
+    .home-menu{
+        margin: 15% 0 10% 0;
+        margin-bottom: 20em;
+    }
     .home-screen{
         width: 80%;
         height: 20em;
@@ -119,21 +143,30 @@ input,#message{
         height: 20em;
         width: 15em;
     }    
-    .home-screen-profile{
-        
+    .home-screen-profile{        
         text-align: center;
+    }
+    .work-screen{
+        width: 90%;
+    }
+    .work-images img{
+        transform: scale(0.8);
+        padding: unset;
+    }
+    footer{
+        height: 50vh;
     }
 }
 
 /* For Tablet screens */
 @media screen and (max-width: 768px){
     .home-screen{
-        width: 60%;
-        height: 12em;
+        width: 80%;
+        height: 18em;
     }
     .home-screen img{
-        height: 12em;
-        width: 10em;
+        height: 18em;
+        width: 12em;
     }    
     .contact-screen{
         width: 80%;
@@ -147,12 +180,17 @@ input,#message{
     #button{
         padding: 1em;
     }
+    footer{
+        height: 90vh;
+    }
 }
 
 @media screen and (max-width: 425px){
+    .menu{
+        gap: 8%;
+    }
     .home,.work,.contact,.twitter{
-        transform: scale(1);
-        padding-left: 1em;
+        transform: scale(1.5);
     }
     .home-screen{
         display: none;
@@ -163,6 +201,22 @@ input,#message{
         width: 17em;
         object-fit: cover;
         margin: auto;
+    }
+    .work-text h1{
+        display: none;
+    }
+    .work-text p{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .work-images{
+        gap: 1em;
+    }
+    .work-images img{
+        transform: unset;
+    }
+    footer{
+        height: 240vh;
     }
     .contact-screen{
         width: 95%;
