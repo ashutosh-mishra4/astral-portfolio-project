@@ -22,8 +22,21 @@ body{
     transform: scale(2);
 
 }
-.home-menu:hover,.work-menu:hover,.contact-menu:hover,.twitter-menu:hover{
+.home:hover,.work:hover,.contact:hover,.twitter:hover{
     cursor: pointer;
+}
+.caret-menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 4%;
+}
+.fa-caret-up{
+    font-size: 1.2em;   
+    position: relative;
+    top: 1.8vh;
+    color: white;
+    display: none;
 }
 .main-section{
     background-color: white;
@@ -35,17 +48,34 @@ body{
 .main-section img{
     float: right;
 }
+.next-box{
+    background-color: black;
+    float: right;
+    height: 5em;
+    width: 5em;
+    position: relative;
+    top: 10em;
+    left: 19em;
+    opacity: 0.7;
+}
+.fa-chevron-right{
+    color: white;
+    font-size: 2em;
+    position: relative;
+    left: 1em;
+    top: 0.75em;
+}
 .home-screen-profile{
     display: none;
     margin-top: 3vh;
 }
 .name{
-    font-size: 3vw;
-    padding: 18% 0 2% 5%;
+    font-size: 2em;
+    padding: 5em 0 0.5em 1.1em;
 }
 .occupation{
-    font-size: 1.5vw;
-    padding-left: 5%;
+    font-size: 0.8em;
+    padding-left: 3.1em;
     color: #aaaaaa;
 }
 .work-screen{
@@ -115,7 +145,7 @@ input,#message{
 footer{
     background-color: white;
     height: 75vh;
-    width: 98.75vw;
+    width: 100vw;
     display: none;
 }
 hr{
@@ -135,9 +165,19 @@ hr{
         margin: 15% 0 10% 0;
         margin-bottom: 20em;
     }
+    .caret-menu{
+        gap: 6.5%;
+    }
     .home-screen{
         width: 80%;
         height: 20em;
+    }
+    .name{
+        padding: 4em 0 .4em 1.3em;
+    }
+    .next-box{
+        left: 15em;
+        top: 7.5em;
     }
     .home-screen img{
         height: 20em;
@@ -160,9 +200,19 @@ hr{
 
 /* For Tablet screens */
 @media screen and (max-width: 768px){
+    .caret-menu{
+        gap: 7%;
+    }
     .home-screen{
         width: 80%;
         height: 18em;
+    }
+    .name{
+        padding: 3.5em 0 .4em 1.3em;
+    }
+    .next-box{
+        top: 6.5em;
+        left: 11.9em;
     }
     .home-screen img{
         height: 18em;
@@ -192,6 +242,12 @@ hr{
     .home,.work,.contact,.twitter{
         transform: scale(1.5);
     }
+    .caret-menu{
+        gap: 11%;
+    }
+    .fa-caret-up{
+        top: 2.3vh;
+    }
     .home-screen{
         display: none;
     }
@@ -201,6 +257,7 @@ hr{
         width: 17em;
         object-fit: cover;
         margin: auto;
+        margin-top: 3vh;
     }
     .work-text h1{
         display: none;
